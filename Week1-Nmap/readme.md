@@ -1,5 +1,7 @@
 # Week 1 - Nmap & THM
-This week we covered
+[Session Video](https://www.twitch.tv/videos/772154140)
+
+This week we covered:
 - What is comsec?
 - Nmap, types of scans & common commands
 - Intro to THM
