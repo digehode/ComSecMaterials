@@ -7,17 +7,13 @@ This week we covered:
 - Intro to THM
 
 ## Challenges
-Ensure you have docker installed:
-```sudo pip install docker-compose && sudo apt install docker.io```
+This week we will be using Docker - if this is new to you, [view our guide & troubleshooting advice - Docker for Dummies!](https://github.com/Cov-ComSec/ComSecMaterials/blob/main/DockerforDummies.pdf)
 ### Challenge 1 - 2 Flags
-- Download the docker-compose.yaml file
-- Run `docker-compose up` in the same folder as the file
-- Should be able to find a machine to attack on 127.0.0.1
+- Requires docker-compose.yaml file
 ### Challenge 2 - 2 Flags
-- Download docker-compose2.yaml file
-- Rename the file to docker-compose.yaml
-- Run `docker-compose up` in the same folder as the file
-- Go to 192.168.42.1 & attack
+- Requires docker-compose2.yaml file
+- Ensure you save the file to a **different location** to the first, & rename it **'docker-compose.yaml'**
+- Start docker & go to 192.168.42.1 & attack
 ### Challenge 3
 - Complete the [Nmap room on thm](https://tryhackme.com/room/rpnmap)
 

@@ -1,6 +1,7 @@
 # ComSecMaterials
 
-The Materials for each week will be uploaded here
+The Materials for each week will be uploaded here!
+This year we will be running docker containers for challenges on your local machine, if you need a hand [view our guide, Docker for Dummies!](https://github.com/Cov-ComSec/ComSecMaterials/blob/main/DockerforDummies.pdf) Which also **contains troubleshooting advice** (I find general advice point 8 fixes most problems).
 
 | Week  | Covered | Video |
 |:-----:|---------|:-----:|
