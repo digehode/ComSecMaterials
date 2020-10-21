@@ -11,7 +11,7 @@ cd docker1
 docker-compose up
 ```
 After running this commands you should see something like this in your terminal.
-![dockerrunning](/imgs/docker_is_working.png)
+![dockerrunning](imgs/docker_is_working.png)
 If you do see this it means you are ready for playing.
 Minimize your shell open a new one and start scanning.
 
