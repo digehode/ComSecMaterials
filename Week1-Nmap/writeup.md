@@ -20,12 +20,12 @@ Minimize your shell open a new one and start scanning.
 ```bash
 sudo nmap -sC -sV 172.18.0.1
 ```
-![nmap1scan](/imgs/nmap_1_scan.png)
+![nmap1scan](imgs/nmap_1_scan.png)
 It looks like we have 4 ports open 21,25,80,8080
 Lets navigate to http://172.18.0.1
 
 If you look at your nmap scan you can that u have something like "/ftp-uploads" so this a directory in the website lets see whats going on in there. We have a folder called a anonymous let's see what's inside. Hm a file called FTPflag.txt looks like we found the first flag. Good Job!
-![ftpanonymous](/imgs/ftp_anonymous.png)
+![ftpanonymous](imgs/ftp_anonymous.png)
 
 So you have one flag.To be honest this flag works more like a hint to tell you what you should do after this. So if you go back to your nmap scan you will see that you have a line "21/tcp open ftp Pure-ftp" so we have a file transfer protocol it is always good to check as this can sometimes be used for file upload to the machine you are attacking. But what's the mean of ftp-anonymous if you do a fast google search you will find out that when this happens you can have acces to ftp server without having to know the credentials.So lets try to connect to the ftp.
 
@@ -40,22 +40,22 @@ ftp 127.18.0.1
 put shell.php
 ```
 The last command is going to upload our shell.
-If you go back to your browser and back to "/ftp-uploads/anonymous" you will see the file shell.php in there clicked and you will have p0wny-shell.![p0wny-shell](/imgs/pwnyshell.png) So you succefully entered the machine. Let's look for the last flag. A easy way to find files on linux is using the file command.
+If you go back to your browser and back to "/ftp-uploads/anonymous" you will see the file shell.php in there clicked and you will have p0wny-shell.![p0wny-shell](imgs/pwnyshell.png) So you succefully entered the machine. Let's look for the last flag. A easy way to find files on linux is using the file command.
 ```bash
 find / -name "*.txt" 2>/dev/null
 ```
-![findcommand](/imgs/findcommand.png)
+![findcommand](imgs/findcommand.png)
 
 Congratulations! Lets move to docker2
 
 # Nmap 2
 
 So to prove how important is nmap we setup a second nmap challenge but right now we not following the common ports as you can see in here. We mangled the ports 
-![StandardPorts](/imgs/commonports.pdf)
+![StandardPorts](imgs/commonports.pdf)
 ```bash
 sudo nmap -sC -sV 192.168.42.1 -p-
 ```
-![nmap2scan](/imgs/nmap_2_scan.png)
+![nmap2scan](imgs/nmap_2_scan.png)
 In this challenge the ftp part is the same as the first challenge and the first flag is the same, the only difference is that the ports have been changed so if you to "http://192.168.42.1" the website is not going to load you need to instead look for something like this "192.168.42.1:8080".
 So lets pass to the second part uploading files to ftp. We have ftp running on port 2121 (2121/tcp ccproxy-ftp) last time you use "ftp $ip" to connect this time that wont work cause you will need to specify the port os instead use something like this "ftp $ip port"
 ```bash
@@ -81,7 +81,7 @@ chmod +x linpeas.sh
 ./linpeash.sh
 ```
 Take a look at the output and try to find the SUID section. If you don't know SUID is a type of permission that you have on linux that let's the user run the file or binary. 
-![linpeas](/imgs/linpeas.png)
+![linpeas](imgs/linpeas.png)
 That last line mentioning vim.basic maybe we can do some research and see how we can exploit it. Fortunately there is a good resource called ["GTFOBINS"](https://gtfobins.github.io/) which is used for looking how we can exploit binaries look for vim and you will see that you can spawn a shell inside vim or using the command. 
 ```
 :!/bin/sh
