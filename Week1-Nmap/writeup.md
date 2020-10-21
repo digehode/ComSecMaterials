@@ -27,7 +27,7 @@ sudo nmap -sC -sV 172.18.0.1
 It looks like we have 4 ports open 21,25,80,8080
 Lets navigate to http://172.18.0.1
 
-If you look at your nmap scan you can that u have something like "/ftp-uploads" so this a directory in the website lets see whats going on in there. We have a folder called a anonymous let's see what's inside. Hm a file called FTPflag.txt looks like we found the first flag. Good Job!
+If you look at your nmap scan you can see that u have something like "/ftp-uploads" so this a directory in the website let's see whats going on in there. We have a folder called a anonymous let's see what's inside. Hm a file called FTPflag.txt looks like we found the first flag. Good Job!
 
 ![ftpanonymous](imgs/ftp_anonymous.png)
 
