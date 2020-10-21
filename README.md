@@ -6,3 +6,6 @@ This year we will be running docker containers for challenges on your local mach
 | Week  | Covered | Video |
 |:-----:|---------|:-----:|
 |1      |Nmap & THM|https://www.twitch.tv/videos/772154140|
+|2      |Website Enumeration|:x:|
+
+Also, don't forget to join the competition! Find additional challenges and submit your flags here! You can work in teams of 2-4, or even by yourself, if you'd prefer. **NOTE: this is for ComSec members only** (university emails required for sign-up).
